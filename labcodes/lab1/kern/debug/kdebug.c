@@ -292,8 +292,11 @@ void
 print_stackframe(void) {
     uint32_t ebp = read_ebp();
     uint32_t eip = read_eip();
-    cprintf("hi, ebp = %08x \n",ebp);
-    cprintf("hi, eip = %08x \n",eip);
+    cprintf("ebp : %08x ",ebp);
+    cprintf("eip : %08x ",eip);
+    uint32_t esp;
+    asm volatile ("movl %%esp, %0" : "=r" (esp));
+    cprintf("esp : %08x ",esp);
     print_debuginfo(eip);
      /* LAB1 YOUR CODE : STEP 1 */
      /* (1) call read_ebp() to get the value of ebp. the type is (uint32_t);
