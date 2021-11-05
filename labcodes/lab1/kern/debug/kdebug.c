@@ -309,6 +309,7 @@ print_stackframe(void) {
         uint32_t *args = (uint32_t *)ebp + 2;
         for (j = 0; j < 4; j ++) {
             cprintf("0x%08x ", args[j]);
+            cprintf("add:0x%08x ", &args[j]);
         }
         cprintf("\n");
         print_debuginfo(eip - 1);
