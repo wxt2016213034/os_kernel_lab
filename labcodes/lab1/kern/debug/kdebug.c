@@ -302,6 +302,7 @@ print_stackframe(void) {
     // cprintf("ss : %08x \n",ss);
     // print_debuginfo(eip);
     uint32_t temp = 0x00000524;
+    cprintf("%08x",temp);
     uint32_t ebp = read_ebp(), eip = read_eip();
     int i, j;
     for (i = 0; ebp != 0 && i < STACKFRAME_DEPTH; i ++) {
