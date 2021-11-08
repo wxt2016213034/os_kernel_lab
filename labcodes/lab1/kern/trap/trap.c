@@ -86,6 +86,9 @@ trapname(int trapno) {
     if (trapno >= IRQ_OFFSET && trapno < IRQ_OFFSET + 16) {
         return "Hardware Interrupt";
     }
+    if (trapno == 121 || trapno == 120){
+        return "Switch Interrupt"
+    }
     return "(unknown trap)";
 }
 
