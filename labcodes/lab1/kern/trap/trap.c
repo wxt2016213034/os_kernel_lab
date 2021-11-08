@@ -169,6 +169,7 @@ trap_dispatch(struct trapframe *tf) {
     case T_SWITCH_TOK:
         panic("T_SWITCH_** ??\n");
         print_trapframe(tf);
+        panic("T_SWITCH_** ??\n");
         break;
     case IRQ_OFFSET + IRQ_IDE1:
     case IRQ_OFFSET + IRQ_IDE2:
