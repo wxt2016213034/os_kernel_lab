@@ -87,7 +87,7 @@ trapname(int trapno) {
         return "Hardware Interrupt";
     }
     if (trapno == 121 || trapno == 120){
-        return "Switch Interrupt"
+        return "Switch Interrupt";
     }
     return "(unknown trap)";
 }
