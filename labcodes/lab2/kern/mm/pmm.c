@@ -211,6 +211,7 @@ page_init(void) {
     extern char end[];
 
     npage = maxpa / PGSIZE;
+    cprintf("%08x\n",npage);
     pages = (struct Page *)ROUNDUP((void *)end, PGSIZE);
 
     for (i = 0; i < npage; i ++) {
