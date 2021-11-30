@@ -222,6 +222,8 @@ page_init(void) {
     for (i = 0; i < memmap->nr_map; i ++) {
         uint64_t begin = memmap->map[i].addr, end = begin + memmap->map[i].size;
         if (memmap->map[i].type == E820_ARM) {
+            cprintf("  memory: %08llx, [%08llx, %08llx], type = %d.\n",
+                memmap->map[i].size, begin, end - 1, memmap->map[i].type);
             if (begin < freemem) {
                 begin = freemem;
             }
