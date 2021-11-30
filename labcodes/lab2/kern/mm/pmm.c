@@ -235,8 +235,8 @@ page_init(void) {
                 end = ROUNDDOWN(end, PGSIZE);
                 if (begin < end) {
                     init_memmap(pa2page(begin), (end - begin) / PGSIZE);
+                    cprintf("%08x\n",(end - begin) / PGSIZE);
                 }
-                cprintf("%08x",(end - begin) / PGSIZE);
             }
         }
     }
