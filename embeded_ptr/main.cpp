@@ -7,4 +7,5 @@ Foo e;
 e.a = 32;
 e.b = 48;
 Foo *f = &e;
+my_allocator *g = &e.my_allo;
 }
