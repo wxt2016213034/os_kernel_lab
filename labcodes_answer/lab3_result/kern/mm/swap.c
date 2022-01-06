@@ -239,6 +239,7 @@ check_swap(void)
         free_pages(check_rp[i],1);
      }
      assert(nr_free==CHECK_VALID_PHY_PAGE_NUM);
+    cprintf("%d",pmm_manager->nr_free_pages());
      
      cprintf("set up init env for check_swap begin!\n");
      //setup initial vir_page<->phy_page environment for page relpacement algorithm 
