@@ -262,7 +262,6 @@ check_swap(void)
          assert((*check_ptep[i] & PTE_P));          
      }
      cprintf("wxt code\n");
-     int *a = 0x0003000;
      *a = 1000;
      cprintf("wxt code\n");
 
