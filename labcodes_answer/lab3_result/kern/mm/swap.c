@@ -241,10 +241,10 @@ check_swap(void)
      
      cprintf("set up init env for check_swap begin!\n");
      //setup initial vir_page<->phy_page environment for page relpacement algorithm 
-     cprintf("wxt code\n");
-     int *a = 0x0003000;
-     *a = 1000;
-     cprintf("wxt code\n");
+     // cprintf("wxt code\n");
+     // int *a = 0x0003000;
+     // *a = 1000;
+     // cprintf("wxt code\n");
      
      pgfault_num=0;
      
@@ -261,9 +261,9 @@ check_swap(void)
          assert(pte2page(*check_ptep[i]) == check_rp[i]);
          assert((*check_ptep[i] & PTE_P));          
      }
-     cprintf("wxt code\n");
-     *a = 1000;
-     cprintf("wxt code\n");
+     // cprintf("wxt code\n");
+     // *a = 1000;
+     // cprintf("wxt code\n");
 
      cprintf("set up init env for check_swap over!\n");
      // now access the virt pages to test  page relpacement algorithm 
