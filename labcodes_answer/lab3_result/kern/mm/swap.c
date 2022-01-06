@@ -241,7 +241,10 @@ check_swap(void)
      
      cprintf("set up init env for check_swap begin!\n");
      //setup initial vir_page<->phy_page environment for page relpacement algorithm 
-
+     cprintf("wxt code\n");
+     int *a = 0x0003000;
+     *a = 1000;
+     cprintf("wxt code\n");
      
      pgfault_num=0;
      
