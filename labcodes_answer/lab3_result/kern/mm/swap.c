@@ -228,16 +228,18 @@ check_swap(void)
           assert(check_rp[i] != NULL );
           assert(!PageProperty(check_rp[i]));
      }
+    cprintf("ddd%d\n",pmm_manager->nr_free_pages());
+
      list_entry_t free_list_store = free_list;
      list_init(&free_list);
      assert(list_empty(&free_list));
      
+    cprintf("ddd%d\n",pmm_manager->nr_free_pages());
+
      //assert(alloc_page() == NULL);
      unsigned int nr_free_store = nr_free;
      nr_free = 0;
      for (i=0;i<CHECK_VALID_PHY_PAGE_NUM;i++) {
-    cprintf("%d\n",pmm_manager->nr_free_pages());
-
         free_pages(check_rp[i],1);
      }
      assert(nr_free==CHECK_VALID_PHY_PAGE_NUM);
