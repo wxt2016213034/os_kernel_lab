@@ -50,7 +50,7 @@ kern_init(void) {
     /* do nothing */
     int *a = 0x1000;
     *a = 10;
-    cprintf("hello");
+    cprintf("hello %d",*a);
     while (1);
 }
 
