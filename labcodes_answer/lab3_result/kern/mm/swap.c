@@ -223,7 +223,6 @@ check_swap(void)
      cprintf("setup Page Table vaddr 0~4MB OVER!\n");
      
      for (i=0;i<CHECK_VALID_PHY_PAGE_NUM;i++) {
-    cprintf("%d",pmm_manager->nr_free_pages());
 
           check_rp[i] = alloc_page();
           assert(check_rp[i] != NULL );
@@ -234,10 +233,11 @@ check_swap(void)
      assert(list_empty(&free_list));
      
      //assert(alloc_page() == NULL);
-     
      unsigned int nr_free_store = nr_free;
      nr_free = 0;
      for (i=0;i<CHECK_VALID_PHY_PAGE_NUM;i++) {
+    cprintf("%d\n",pmm_manager->nr_free_pages());
+
         free_pages(check_rp[i],1);
      }
      assert(nr_free==CHECK_VALID_PHY_PAGE_NUM);
