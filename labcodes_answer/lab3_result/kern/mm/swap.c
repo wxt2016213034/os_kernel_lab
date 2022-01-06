@@ -258,6 +258,11 @@ check_swap(void)
          assert(pte2page(*check_ptep[i]) == check_rp[i]);
          assert((*check_ptep[i] & PTE_P));          
      }
+     cprintf("wxt code\n");
+     int *a = 0x0003000;
+     *a = 1000;
+     cprintf("wxt code\n");
+
      cprintf("set up init env for check_swap over!\n");
      // now access the virt pages to test  page relpacement algorithm 
      ret=check_content_access();
