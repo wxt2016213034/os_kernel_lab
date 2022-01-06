@@ -213,7 +213,7 @@ check_swap(void)
 
      cprintf("wxt code\n");
      
-     int *a = 0x77771000;
+     int *a = 0x1000;
      temp_ptep = get_pte(mm->pgdir, a, 1);
      *a = 10;
      cprintf("hello %d",*a);
