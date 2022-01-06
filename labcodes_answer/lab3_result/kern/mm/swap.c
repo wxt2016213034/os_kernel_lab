@@ -207,7 +207,6 @@ check_swap(void)
 
      //setup the temp Page Table vaddr 0~4MB
      cprintf("setup Page Table for vaddr 0X1000, so alloc a page\n");
-    cprintf("%d",pmm_manager->nr_free_pages());
 
      pte_t *temp_ptep=NULL;
      temp_ptep = get_pte(mm->pgdir, BEING_CHECK_VALID_VADDR, 1);
@@ -268,6 +267,8 @@ check_swap(void)
      // cprintf("wxt code\n");
 
      cprintf("set up init env for check_swap over!\n");
+    cprintf("%d",pmm_manager->nr_free_pages());
+
      // now access the virt pages to test  page relpacement algorithm 
      ret=check_content_access();
      assert(ret==0);
