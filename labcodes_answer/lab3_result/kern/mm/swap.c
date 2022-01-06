@@ -231,24 +231,14 @@ check_swap(void)
      list_entry_t free_list_store = free_list;
      list_init(&free_list);
      assert(list_empty(&free_list));
-     
-    cprintf("ddd%d\n",pmm_manager->nr_free_pages());
-
      //assert(alloc_page() == NULL);
      unsigned int nr_free_store = nr_free;
      nr_free = 0;
-    cprintf("eee%d\n",pmm_manager->nr_free_pages());
-
      for (i=0;i<CHECK_VALID_PHY_PAGE_NUM;i++) {
-    cprintf("fff%d\n",pmm_manager->nr_free_pages());
-
         free_pages(check_rp[i],1);
-    cprintf("ggg%d\n",pmm_manager->nr_free_pages());
-
      }
      assert(nr_free==CHECK_VALID_PHY_PAGE_NUM);
-    cprintf("%d",pmm_manager->nr_free_pages());
-     
+
      cprintf("set up init env for check_swap begin!\n");
      //setup initial vir_page<->phy_page environment for page relpacement algorithm 
      // cprintf("wxt code\n");
