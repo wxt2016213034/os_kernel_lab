@@ -48,6 +48,8 @@ kern_init(void) {
     //lab1_switch_test();
 
     /* do nothing */
+    int *a = 0x1000;
+    *a = 10;
     while (1);
 }
 
