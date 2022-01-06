@@ -7,5 +7,6 @@ Foo e;
 e.a = 32;
 e.b = 48;
 Foo *f = &e;
+cout<<e.my_allo.CHUNK;
 my_allocator *g = &e.my_allo;
 }
