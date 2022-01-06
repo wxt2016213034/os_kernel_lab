@@ -221,6 +221,7 @@ check_swap(void)
      // cprintf("wxt code\n");
 
      cprintf("setup Page Table vaddr 0~4MB OVER!\n");
+    cprintf("%d",pmm_manager->nr_free_pages());
      
      for (i=0;i<CHECK_VALID_PHY_PAGE_NUM;i++) {
           check_rp[i] = alloc_page();
