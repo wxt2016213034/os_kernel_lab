@@ -274,7 +274,6 @@ check_pgfault(void) {
     check_mm_struct = NULL;
 
     assert(nr_free_pages_store == nr_free_pages());
-    cprintf("%d",pmm_manager->nr_free_pages());
     cprintf("check_pgfault() succeeded!\n");
 }
 //page fault number
