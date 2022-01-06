@@ -210,6 +210,15 @@ check_swap(void)
      pte_t *temp_ptep=NULL;
      temp_ptep = get_pte(mm->pgdir, BEING_CHECK_VALID_VADDR, 1);
      assert(temp_ptep!= NULL);
+
+     cprintf("wxt code\n");
+     
+     int *a = 0x77771000;
+     temp_ptep = get_pte(mm->pgdir, a, 1);
+     *a = 10;
+     cprintf("hello %d",*a);
+     cprintf("wxt code\n");
+
      cprintf("setup Page Table vaddr 0~4MB OVER!\n");
      
      for (i=0;i<CHECK_VALID_PHY_PAGE_NUM;i++) {

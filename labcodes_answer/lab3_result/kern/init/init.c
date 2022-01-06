@@ -48,9 +48,6 @@ kern_init(void) {
     //lab1_switch_test();
 
     /* do nothing */
-    int *a = 0x77771000;
-    *a = 10;
-    cprintf("hello %d",*a);
     while (1);
 }
 
