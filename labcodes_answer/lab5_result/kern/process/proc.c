@@ -824,6 +824,7 @@ init_main(void *arg) {
     if (pid <= 0) {
         panic("create user_main failed.\n");
     }
+    cprintf("here");
     struct proc_struct *user_proc_wxt = find_proc(pid);
     set_proc_name(user_proc_wxt, "wxt");
 
