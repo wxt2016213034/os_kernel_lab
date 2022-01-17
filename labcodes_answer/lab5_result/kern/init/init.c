@@ -16,7 +16,7 @@
 int kern_init(void) __attribute__((noreturn));
 
 static void lab1_switch_test(void);
-
+static void lab1_print_cur_status(void);
 int
 kern_init(void) {
     extern char edata[], end[];
