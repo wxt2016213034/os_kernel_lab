@@ -266,7 +266,6 @@ check_swap(void)
      // cprintf("wxt code\n");
 
      cprintf("set up init env for check_swap over!\n");
-    cprintf("%d",pmm_manager->nr_free_pages());
 
      // now access the virt pages to test  page relpacement algorithm 
      ret=check_content_access();

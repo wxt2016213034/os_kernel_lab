@@ -26,7 +26,7 @@ kern_init(void) {
 
     const char *message = "(THU.CST) os is loading ...";
     cprintf("%s\n\n", message);
-
+    lab1_print_cur_status();
     print_kerninfo();
 
     grade_backtrace();
