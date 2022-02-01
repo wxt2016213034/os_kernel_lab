@@ -9,6 +9,7 @@ void fk(){
         if ((pid = fork()) == 0) {
             
             cprintf("temp = %d\n", temp);
+            cprintf("temp = %8x\n", &temp);
             cprintf("I am child %d\n", n);
             // exit(0);
         }
@@ -20,6 +21,7 @@ main(void) {
     fk();
     temp = 3;
             cprintf("temp = %d\n", temp);
+            cprintf("temp = %8x\n", &temp);
     // for (n = 0; n < max_child; n ++) {
     //     if ((pid = fork()) == 0) {
     //         cprintf("I am child %d\n", n);
