@@ -19,6 +19,7 @@ main(void) {
     int n, pid;
     fk();
     temp = 3;
+            cprintf("temp = %d\n", temp);
     // for (n = 0; n < max_child; n ++) {
     //     if ((pid = fork()) == 0) {
     //         cprintf("I am child %d\n", n);
