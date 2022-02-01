@@ -2,11 +2,13 @@
 #include <stdio.h>
 
 const int max_child = 32;
-
+int temp = 1;
 void fk(){
     int n = 2;
     int pid;
         if ((pid = fork()) == 0) {
+            
+            cprintf("temp = %d\n", temp);
             cprintf("I am child %d\n", n);
             // exit(0);
         }
@@ -16,6 +18,7 @@ int
 main(void) {
     int n, pid;
     fk();
+    temp = 3;
     // for (n = 0; n < max_child; n ++) {
     //     if ((pid = fork()) == 0) {
     //         cprintf("I am child %d\n", n);
