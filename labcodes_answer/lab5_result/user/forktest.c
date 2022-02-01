@@ -8,7 +8,7 @@ void fk(){
     int pid;
         if ((pid = fork()) == 0) {
             cprintf("I am child %d\n", n);
-            exit(0);
+            // exit(0);
         }
 }
 
